@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    #3rd party
+    'crispy_forms',
+
     #local
     'login.apps.LoginConfig',
     'dashboard.apps.DashboardConfig',
@@ -133,3 +136,5 @@ LOGOUT_REDIRECT_URL = 'login'
 
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = str(BASE_DIR.joinpath('sent_emails'))
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
