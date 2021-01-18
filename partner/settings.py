@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     #local
     'login.apps.LoginConfig',
     'dashboard.apps.DashboardConfig',
-    'demologin.apps.DemologinConfig',
 ]
 
 MIDDLEWARE = [
@@ -132,4 +131,5 @@ STATICFILES_DIRS = (
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'login'
 
-EMAIL_BACKEND = "'django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = str(BASE_DIR.joinpath('sent_emails'))
